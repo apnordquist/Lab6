@@ -1,5 +1,3 @@
-window.alert("test")
-
 /****************** YOUR NAME: Adam Nordquist
 
 The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
@@ -13,9 +11,9 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
-let modelName = "XYZ"
+let modelName = "XYZ";
 
-let duration = 0
+let duration = 0;
 
 /****************** helper function ******************/
 /* create a function called recalculate() which will
@@ -28,8 +26,7 @@ let duration = 0
 */
 
 // INSERT YOUR CODE HERE
-
-const calculatedCost = document.getElementById("calculated-cost") 
+let calculatedCost = document.getElementById("calculated-cost"); 
 
 function recalculate() {
     totalCost = modelName == "XYZ" ? duration * 100 : duration  * 213; 
@@ -46,11 +43,13 @@ function recalculate() {
     - if modelName is currently "CPRG", change the value of modelName to "XYZ", and change the innerHTML of the model-text span element to "Model XYZ"
     - then, recalculate() the total cost.
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
-modelButton.addEventListener("click", changeModel)
 
 // INSERT YOUR CODE HERE
+let switchModel = document.getElementById("model-text");
 
-const switchModel = document.getElementById("model-text");
+let modelButton = document.getElementById("model-button");
+
+modelButton.addEventListener("click", changeModel());
 
 function changeModel() {
     modelText = modelName == "XYZ" ? "Model CPRG" : "Model XYZ";
@@ -71,13 +70,15 @@ function changeModel() {
 */
 
 // INSERT YOUR CODE HERE
-durationButton.addEventListener("click", changeDuration());
+let durationText = document.getElementById("duration-text");
 
-const changeDuration = document.getElementById("duration-button")
+let durationButton = document.getElementById("duration-button");
+
+durationButton.addEventListener("click", changeDuration());
 
 function changeDuration() {
     durationPrompt = prompt("Enter duration:","0");
-    changeDuration.textContent = durationPrompt;
+    durationText.textContent = durationPrompt;
     recalculate();
 }
 
