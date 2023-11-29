@@ -1,3 +1,5 @@
+window.alert("test")
+
 /****************** YOUR NAME: Adam Nordquist
 
 The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
@@ -27,7 +29,7 @@ let duration = 0
 
 // INSERT YOUR CODE HERE
 
-let calculatedCost = document.getElementById("calculated-cost") 
+const calculatedCost = document.getElementById("calculated-cost") 
 
 function recalculate() {
     totalCost = modelName == "XYZ" ? duration * 100 : duration  * 213; 
@@ -48,13 +50,13 @@ modelButton.addEventListener("click", changeModel)
 
 // INSERT YOUR CODE HERE
 
-let switchModel = document.getElementById("model-text");
+const switchModel = document.getElementById("model-text");
 
 function changeModel() {
     modelText = modelName == "XYZ" ? "Model CPRG" : "Model XYZ";
     modelName = modelName == "XYZ" ? "CPRG" : "XYZ";
     switchModel.textContent = modelText;
-    recalculate()
+    recalculate();
 }
 
 /****************** duration button logic ******************/
@@ -71,11 +73,11 @@ function changeModel() {
 // INSERT YOUR CODE HERE
 durationButton.addEventListener("click", changeDuration());
 
-let changeDuration = document.getElementById("duration-button")
+const changeDuration = document.getElementById("duration-button")
 
 function changeDuration() {
     durationPrompt = prompt("Enter duration:","0");
     changeDuration.textContent = durationPrompt;
-    recalculate()
+    recalculate();
 }
 
