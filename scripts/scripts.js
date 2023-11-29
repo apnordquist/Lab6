@@ -55,7 +55,7 @@ function changeModel() {
     modelText = modelName == "XYZ" ? "Model CPRG" : "Model XYZ";
     modelName = modelName == "XYZ" ? "CPRG" : "XYZ";
     switchModel.textContent = modelText;
-    recalculate;
+    recalculate();
 }
 
 /****************** duration button logic ******************/
@@ -77,7 +77,8 @@ let durationButton = document.getElementById("duration-button");
 durationButton.addEventListener("click", changeDuration);
 
 function changeDuration() {
-    durationPrompt = prompt("Enter duration:","0");
+    durationPrompt = prompt("How many days is the booking for?","0");
+    duration = Number(durationPrompt)
     durationText.textContent = durationPrompt;
-    recalculate;
+    recalculate();
 }
