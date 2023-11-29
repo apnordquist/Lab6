@@ -49,13 +49,13 @@ let switchModel = document.getElementById("model-text");
 
 let modelButton = document.getElementById("model-button");
 
-modelButton.addEventListener("click", changeModel());
+modelButton.addEventListener("click", changeModel);
 
 function changeModel() {
     modelText = modelName == "XYZ" ? "Model CPRG" : "Model XYZ";
     modelName = modelName == "XYZ" ? "CPRG" : "XYZ";
     switchModel.textContent = modelText;
-    recalculate();
+    recalculate;
 }
 
 /****************** duration button logic ******************/
@@ -74,11 +74,10 @@ let durationText = document.getElementById("duration-text");
 
 let durationButton = document.getElementById("duration-button");
 
-durationButton.addEventListener("click", changeDuration());
+durationButton.addEventListener("click", changeDuration);
 
 function changeDuration() {
     durationPrompt = prompt("Enter duration:","0");
     durationText.textContent = durationPrompt;
-    recalculate();
+    recalculate;
 }
-
