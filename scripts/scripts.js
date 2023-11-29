@@ -78,7 +78,7 @@ durationButton.addEventListener("click", changeDuration);
 
 function changeDuration() {
     durationPrompt = prompt("How many days is the booking for?","0");
-    duration = Number(durationPrompt)
+    duration = Number(durationPrompt);
     durationText.textContent = durationPrompt;
     recalculate();
 }
